@@ -9,6 +9,9 @@ readme = "README.md"
 dynamic = ["version"]
 dependencies = [
     # "frappe~=15.0.0" # Installed and managed by bench.
+    "pdfplumber>=0.11,<0.12",  # MIT. Reads PDF text and renders page previews
+    "argostranslate>=1.9,<2",  # Offline neural translation; language models are fetched when first needed
+    "faster-whisper>=1.1,<2",  # Local speech-to-text transcription
 ]
 
 [build-system]

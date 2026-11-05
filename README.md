@@ -4,12 +4,18 @@ Zero-touch document processing for Frappe and ERPNext: turns unstructured busine
 
 ### Installation
 
-You can install this app using the [bench](https://github.com/frappe/bench) CLI:
+See the complete [installation and upgrade guide](docs/INSTALL.md) before installing. It covers the CPU PyTorch constraint, Tesseract OCR packages, local translation and transcription models, HTTPS microphone access, site migration, and verification.
+
+Basic installation on a bench that already has Frappe and ERPNext:
 
 ```bash
 cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch develop
-bench install-app zero_touch
+PIP_CONSTRAINT=apps/zero_touch/constraints-translation.txt \
+PIP_EXTRA_INDEX_URL=https://download.pytorch.org/whl/cpu \
+  bench get-app zero_touch $URL_OF_THIS_REPO --branch main
+bench --site your-site.example install-app zero_touch
+bench --site your-site.example migrate
+bench build --app zero_touch
 ```
 
 ### Contributing
