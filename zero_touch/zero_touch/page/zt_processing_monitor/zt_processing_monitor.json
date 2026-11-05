@@ -1,0 +1,23 @@
+{
+ "content": null,
+ "creation": "2026-11-03 10:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Page",
+ "icon": "fa fa-tachometer",
+ "idx": 0,
+ "modified": "2026-11-03 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Zero Touch",
+ "name": "zt-processing-monitor",
+ "owner": "Administrator",
+ "page_name": "zt-processing-monitor",
+ "roles": [
+  {"role": "Zero Touch Manager"},
+  {"role": "Zero Touch Reviewer"},
+  {"role": "Zero Touch Admin"},
+  {"role": "System Manager"}
+ ],
+ "standard": "Yes",
+ "system_page": 0,
+ "title": "Processing Monitor"
+}
