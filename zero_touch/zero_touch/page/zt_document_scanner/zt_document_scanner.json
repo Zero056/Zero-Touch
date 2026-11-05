@@ -1,0 +1,6 @@
+{
+ "doctype":"Page", "name":"zt-document-scanner", "page_name":"zt-document-scanner",
+ "title":"Document Scanner", "module":"Zero Touch", "standard":"Yes",
+ "icon":"fa fa-file-text-o", "system_page":0,
+ "roles":[{"role":"Zero Touch Uploader"},{"role":"Zero Touch Reviewer"},{"role":"Zero Touch Manager"},{"role":"Zero Touch Admin"},{"role":"System Manager"}]
+}
