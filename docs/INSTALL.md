@@ -167,7 +167,7 @@ Check the worker log for errors after the test: `tail -n 100 logs/worker.error.l
 - Only one enabled mapping can apply to a given document type and company.
 - Transforms are a fixed list: `none`, `strip`, `upper`, `date_iso`, `money`, `digits_only`. They cannot be extended from the UI.
 
-Creating the ERPNext document from a mapping is the next release. Mappings can be configured now and will be used then.
+After saving the mapping, upload a document and open the **Review Center**. The mapping controls both what is read and the fields used when **Create** inserts the draft. Rows marked **ERPNext fills automatically** are left to ERPNext; required fields that neither the document nor ERPNext can fill produce a clear blocker.
 
 ## 9. Upgrade
 
