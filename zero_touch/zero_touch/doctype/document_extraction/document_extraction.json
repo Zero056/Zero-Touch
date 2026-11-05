@@ -1,0 +1,122 @@
+{
+ "actions": [],
+ "creation": "2026-11-04 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "links": [],
+ "modified": "2026-11-04 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Zero Touch",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "name": "Document Extraction",
+ "autoname": "format:EXT-{YYYY}-{#####}",
+ "naming_rule": "Expression",
+ "track_changes": 1,
+ "field_order": [
+  "intake",
+  "document_profile",
+  "attempt_no",
+  "status",
+  "engine",
+  "text_source",
+  "language",
+  "page_count",
+  "checks_totals",
+  "missing_required",
+  "fields",
+  "lines"
+ ],
+ "fields": [
+  {
+   "fieldname": "intake",
+   "fieldtype": "Link",
+   "options": "Document Intake",
+   "label": "Intake",
+   "search_index": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "document_profile",
+   "fieldtype": "Link",
+   "options": "Document Field Mapping",
+   "label": "Document Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attempt_no",
+   "fieldtype": "Int",
+   "label": "Attempt",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "options": "succeeded\nfailed",
+   "label": "Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "engine",
+   "fieldtype": "Data",
+   "label": "Engine",
+   "read_only": 1
+  },
+  {
+   "fieldname": "text_source",
+   "fieldtype": "Select",
+   "label": "Text Source",
+   "options": "text_layer\nocr",
+   "read_only": 1
+  },
+  {
+   "fieldname": "language",
+   "fieldtype": "Data",
+   "label": "Language",
+   "read_only": 1
+  },
+  {
+   "fieldname": "page_count",
+   "fieldtype": "Int",
+   "label": "Pages",
+   "read_only": 1
+  },
+  {
+   "fieldname": "checks_totals",
+   "fieldtype": "Data",
+   "label": "Totals Consistent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "missing_required",
+   "fieldtype": "Small Text",
+   "label": "Missing Required",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fields",
+   "fieldtype": "Table",
+   "options": "Extracted Field",
+   "label": "Fields",
+   "read_only": 1
+  },
+  {
+   "fieldname": "lines",
+   "fieldtype": "Table",
+   "options": "Extracted Line Item",
+   "label": "Line Items",
+   "read_only": 1
+  }
+ ],
+ "permissions": [
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "role": "System Manager"
+  }
+ ]
+}

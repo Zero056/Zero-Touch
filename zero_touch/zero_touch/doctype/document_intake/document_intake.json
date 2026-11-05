@@ -1,0 +1,261 @@
+{
+ "autoname": "format:DI-{YYYY}-{#####}",
+ "actions": [],
+ "creation": "2026-11-03 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "document_profile",
+  "target_doctype",
+  "status",
+  "stage",
+  "status_reason",
+  "duplicate_of",
+  "section_file",
+  "original_file",
+  "original_filename",
+  "file_sha256",
+  "file_size",
+  "mime_type",
+  "channel",
+  "current_extraction",
+  "review_saved",
+  "reviewed_by",
+  "reviewed_at",
+  "section_processing",
+  "attempt_count",
+  "retry_count",
+  "next_retry_at",
+  "submitted_by",
+  "assigned_to",
+  "lock_token",
+  "lock_expires_at"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "document_profile",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Document Type",
+   "options": "Document Field Mapping",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "document_profile.target_doctype",
+   "fieldname": "target_doctype",
+   "fieldtype": "Data",
+   "label": "Target DocType",
+   "read_only": 1
+  },
+  {
+   "default": "Received",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Received\nQueued\nProcessing\nPending Review\nPending Approval\nReady to Create\nCreating\nCreated\nFailed\nRejected\nDuplicate\nCancelled",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "none",
+   "description": "Last completed processing checkpoint.",
+   "fieldname": "stage",
+   "fieldtype": "Select",
+   "label": "Stage",
+   "options": "none\nclassified\nextracted\nvalidated\nmatched",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status_reason",
+   "fieldtype": "Small Text",
+   "label": "Status Reason",
+   "read_only": 1
+  },
+  {
+   "fieldname": "duplicate_of",
+   "fieldtype": "Link",
+   "label": "Duplicate Of",
+   "options": "Document Intake",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_file",
+   "fieldtype": "Section Break",
+   "label": "Original Document"
+  },
+  {
+   "fieldname": "original_file",
+   "fieldtype": "Attach",
+   "label": "Original File (private)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "original_filename",
+   "fieldtype": "Data",
+   "label": "Original Filename",
+   "read_only": 1
+  },
+  {
+   "fieldname": "file_sha256",
+   "fieldtype": "Data",
+   "label": "SHA-256",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "file_size",
+   "fieldtype": "Int",
+   "label": "File Size (bytes)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mime_type",
+   "fieldtype": "Data",
+   "label": "MIME Type",
+   "read_only": 1
+  },
+  {
+   "default": "upload",
+   "fieldname": "channel",
+   "fieldtype": "Select",
+   "label": "Channel",
+   "options": "upload\ndrag_drop\nerp_attachment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_processing",
+   "fieldtype": "Section Break",
+   "label": "Processing"
+  },
+  {
+   "default": "0",
+   "fieldname": "attempt_count",
+   "fieldtype": "Int",
+   "label": "Attempts",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "retry_count",
+   "fieldtype": "Int",
+   "label": "Automatic Retries",
+   "read_only": 1
+  },
+  {
+   "fieldname": "next_retry_at",
+   "fieldtype": "Datetime",
+   "label": "Next Retry At",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "submitted_by",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Submitted By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "User"
+  },
+  {
+   "fieldname": "lock_token",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Lock Token",
+   "read_only": 1
+  },
+  {
+   "fieldname": "lock_expires_at",
+   "fieldtype": "Datetime",
+   "hidden": 1,
+   "label": "Lock Expires At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_extraction",
+   "fieldtype": "Link",
+   "label": "Current Extraction",
+   "options": "Document Extraction",
+   "read_only": 1
+  },
+  {
+   "fieldname": "review_saved",
+   "fieldtype": "Check",
+   "label": "Review Saved",
+   "read_only": 1,
+   "default": "0"
+  },
+  {
+   "fieldname": "reviewed_by",
+   "fieldtype": "Link",
+   "label": "Reviewed By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reviewed_at",
+   "fieldtype": "Datetime",
+   "label": "Reviewed At",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-03 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Zero Touch",
+ "name": "Document Intake",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "if_owner": 1,
+   "read": 1,
+   "role": "Zero Touch Uploader"
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Zero Touch Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Zero Touch Reviewer",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Zero Touch Admin"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

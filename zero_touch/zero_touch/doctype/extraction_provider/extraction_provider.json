@@ -1,0 +1,146 @@
+{
+ "autoname": "field:provider_code",
+ "actions": [],
+ "creation": "2026-11-03 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "provider_code",
+  "provider_type",
+  "engine",
+  "enabled",
+  "priority",
+  "data_residency",
+  "section_endpoint",
+  "base_url",
+  "api_key",
+  "model_name",
+  "section_limits",
+  "timeout_seconds",
+  "max_pages",
+  "languages"
+ ],
+ "fields": [
+  {
+   "fieldname": "provider_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Provider Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "provider_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Provider Type",
+   "options": "text_layer\nocr\nclassifier\nllm",
+   "reqd": 1
+  },
+  {
+   "description": "Engines are selected by name from the application registry. Free-form import paths are not accepted.",
+   "fieldname": "engine",
+   "fieldtype": "Select",
+   "label": "Engine",
+   "options": "null\ntext_layer_stub",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Enabled"
+  },
+  {
+   "default": "100",
+   "description": "Lower values run first.",
+   "fieldname": "priority",
+   "fieldtype": "Int",
+   "label": "Priority"
+  },
+  {
+   "default": "local",
+   "fieldname": "data_residency",
+   "fieldtype": "Select",
+   "label": "Data Residency",
+   "options": "local\nexternal"
+  },
+  {
+   "fieldname": "section_endpoint",
+   "fieldtype": "Section Break",
+   "label": "Endpoint and Credentials"
+  },
+  {
+   "description": "External endpoints must use https. Loopback is allowed only for local residency.",
+   "fieldname": "base_url",
+   "fieldtype": "Data",
+   "label": "Base URL"
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Password",
+   "label": "API Key"
+  },
+  {
+   "fieldname": "model_name",
+   "fieldtype": "Data",
+   "label": "Model Name"
+  },
+  {
+   "fieldname": "section_limits",
+   "fieldtype": "Section Break",
+   "label": "Limits"
+  },
+  {
+   "default": "30",
+   "fieldname": "timeout_seconds",
+   "fieldtype": "Int",
+   "label": "Timeout (seconds)"
+  },
+  {
+   "default": "50",
+   "fieldname": "max_pages",
+   "fieldtype": "Int",
+   "label": "Maximum Pages"
+  },
+  {
+   "default": "eng",
+   "description": "Tesseract-style codes, e.g. eng+ara.",
+   "fieldname": "languages",
+   "fieldtype": "Data",
+   "label": "Languages"
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-03 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Zero Touch",
+ "name": "Extraction Provider",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Zero Touch Manager"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Zero Touch Admin",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

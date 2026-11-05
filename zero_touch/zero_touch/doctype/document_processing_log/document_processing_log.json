@@ -1,0 +1,118 @@
+{
+ "autoname": "hash",
+ "actions": [],
+ "creation": "2026-11-03 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "intake",
+  "event_type",
+  "stage",
+  "from_status",
+  "to_status",
+  "actor",
+  "job_id",
+  "provider_code",
+  "duration_ms",
+  "message"
+ ],
+ "fields": [
+  {
+   "fieldname": "intake",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Intake",
+   "options": "Document Intake",
+   "search_index": 1
+  },
+  {
+   "fieldname": "event_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Event",
+   "options": "transition\ntransition_refused\nupload_accepted\nupload_rejected\nduplicate_detected\noriginal_downloaded\naccess_denied\nstage_start\nstage_end\nstage_fail\nretry_scheduled\nlock_recovered\nlock_skipped\nprovider_skipped\nmanual_review_required\ncorrection\nmaster_created",
+   "reqd": 1
+  },
+  {
+   "fieldname": "stage",
+   "fieldtype": "Data",
+   "label": "Stage"
+  },
+  {
+   "fieldname": "from_status",
+   "fieldtype": "Data",
+   "label": "From",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "to_status",
+   "fieldtype": "Data",
+   "label": "To",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "actor",
+   "fieldtype": "Data",
+   "label": "Actor"
+  },
+  {
+   "fieldname": "job_id",
+   "fieldtype": "Data",
+   "label": "Job ID"
+  },
+  {
+   "fieldname": "provider_code",
+   "fieldtype": "Data",
+   "label": "Provider"
+  },
+  {
+   "fieldname": "duration_ms",
+   "fieldtype": "Int",
+   "label": "Duration (ms)"
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Message"
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-03 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Zero Touch",
+ "name": "Document Processing Log",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "read": 1,
+   "report": 1,
+   "role": "System Manager"
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "Zero Touch Admin"
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "Zero Touch Manager"
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "Zero Touch Reviewer"
+  },
+  {
+   "read": 1,
+   "role": "Zero Touch Uploader"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0
+}

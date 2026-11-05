@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "creation": "2026-11-04 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "links": [],
+ "modified": "2026-11-04 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Zero Touch",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "name": "Document Field Mapping Row",
+ "istable": 1,
+ "naming_rule": "Random",
+ "track_changes": 0,
+ "permissions": [],
+ "field_order": [
+  "target_field",
+  "target_table",
+  "target_label",
+  "target_type",
+  "source",
+  "pdf_label_en",
+  "pdf_label_ar",
+  "value_type",
+  "transform",
+  "required",
+  "create_if_missing"
+ ],
+ "fields": [
+  {
+   "fieldname": "target_field",
+   "fieldtype": "Select",
+   "label": "Target Field",
+   "in_list_view": 1,
+   "reqd": 1,
+   "options": "",
+   "description": "Choose the field on the target document."
+  },
+  {
+   "fieldname": "target_table",
+   "fieldtype": "Data",
+   "label": "Table",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_label",
+   "fieldtype": "Data",
+   "label": "Field Name",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "target_type",
+   "fieldtype": "Data",
+   "label": "Field Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "in_list_view": 1,
+   "reqd": 1,
+   "default": "From document",
+   "options": "From document\nERPNext fills automatically",
+   "description": "From document: the value is read from the PDF or image, so a label is required. ERPNext fills automatically: ERPNext sets the value from settings, so no label is needed."
+  },
+  {
+   "fieldname": "pdf_label_en",
+   "fieldtype": "Data",
+   "label": "Label on PDF (English)",
+   "in_list_view": 1,
+   "description": "Text as it appears on the document, for example Invoice No"
+  },
+  {
+   "fieldname": "pdf_label_ar",
+   "fieldtype": "Data",
+   "label": "Label on PDF (Arabic)",
+   "in_list_view": 1,
+   "description": "Arabic text as it appears on the document, for example رقم الفاتورة"
+  },
+  {
+   "fieldname": "value_type",
+   "fieldtype": "Select",
+   "label": "Value Type",
+   "in_list_view": 1,
+   "reqd": 1,
+   "default": "text",
+   "options": "text\nid\ntax_id\ndate\nmoney\nname"
+  },
+  {
+   "fieldname": "transform",
+   "fieldtype": "Select",
+   "label": "Transform",
+   "default": "none",
+   "options": "none\nstrip\nupper\ndate_iso\nmoney\ndigits_only"
+  },
+  {
+   "fieldname": "required",
+   "fieldtype": "Check",
+   "label": "Required",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "create_if_missing",
+   "fieldtype": "Check",
+   "label": "Create If Missing",
+   "description": "For Customer and Supplier links only. If the value is not in ERPNext, a new record is created from the extracted value when the review is saved."
+  }
+ ]
+}

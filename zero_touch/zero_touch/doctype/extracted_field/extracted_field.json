@@ -1,0 +1,126 @@
+{
+ "actions": [],
+ "creation": "2026-11-04 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "links": [],
+ "modified": "2026-11-04 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Zero Touch",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "istable": 1,
+ "name": "Extracted Field",
+ "naming_rule": "Random",
+ "track_changes": 0,
+ "permissions": [],
+ "field_order": [
+  "field_key",
+  "label",
+  "value_type",
+  "value",
+  "reviewed_value",
+  "state",
+  "confidence",
+  "page_no",
+  "source_text",
+  "required",
+  "link_doctype",
+  "link_create",
+  "link_status",
+  "link_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "field_key",
+   "fieldtype": "Data",
+   "label": "Field",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "label": "Label",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "value_type",
+   "fieldtype": "Data",
+   "label": "Value Type"
+  },
+  {
+   "fieldname": "value",
+   "fieldtype": "Small Text",
+   "label": "Extracted Value",
+   "in_list_view": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "reviewed_value",
+   "fieldtype": "Small Text",
+   "label": "Reviewed Value",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Select",
+   "label": "State",
+   "options": "extracted\nmissing\nuncertain\nconflict",
+   "in_list_view": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "confidence",
+   "fieldtype": "Percent",
+   "label": "Confidence",
+   "read_only": 1
+  },
+  {
+   "fieldname": "page_no",
+   "fieldtype": "Int",
+   "label": "Page",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_text",
+   "fieldtype": "Small Text",
+   "label": "Source Text",
+   "read_only": 1
+  },
+  {
+   "fieldname": "required",
+   "fieldtype": "Check",
+   "label": "Required",
+   "read_only": 1
+  },
+  {
+   "fieldname": "link_doctype",
+   "fieldtype": "Data",
+   "label": "Link To",
+   "read_only": 1
+  },
+  {
+   "fieldname": "link_create",
+   "fieldtype": "Check",
+   "label": "Create If Missing",
+   "read_only": 1
+  },
+  {
+   "fieldname": "link_status",
+   "fieldtype": "Select",
+   "label": "Link Status",
+   "options": "\nmatched\ncreated\nnot_found\nambiguous\nerror",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "link_name",
+   "fieldtype": "Data",
+   "label": "Linked Record",
+   "read_only": 1
+  }
+ ]
+}

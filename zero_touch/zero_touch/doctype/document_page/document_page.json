@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "creation": "2026-11-04 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "links": [],
+ "modified": "2026-11-04 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Zero Touch",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "name": "Document Page",
+ "autoname": "hash",
+ "istable": 0,
+ "track_changes": 0,
+ "field_order": [
+  "intake",
+  "extraction",
+  "page_no",
+  "width",
+  "height",
+  "preview_file",
+  "text_layer"
+ ],
+ "fields": [
+  {
+   "fieldname": "intake",
+   "fieldtype": "Link",
+   "options": "Document Intake",
+   "label": "Intake",
+   "search_index": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "extraction",
+   "fieldtype": "Link",
+   "options": "Document Extraction",
+   "label": "Extraction",
+   "read_only": 1
+  },
+  {
+   "fieldname": "page_no",
+   "fieldtype": "Int",
+   "label": "Page",
+   "read_only": 1
+  },
+  {
+   "fieldname": "width",
+   "fieldtype": "Float",
+   "label": "Width",
+   "read_only": 1
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Float",
+   "label": "Height",
+   "read_only": 1
+  },
+  {
+   "fieldname": "preview_file",
+   "fieldtype": "Attach",
+   "label": "Preview (private)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "text_layer",
+   "fieldtype": "Long Text",
+   "label": "Text Layer",
+   "read_only": 1
+  }
+ ],
+ "permissions": [
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "role": "System Manager"
+  }
+ ]
+}

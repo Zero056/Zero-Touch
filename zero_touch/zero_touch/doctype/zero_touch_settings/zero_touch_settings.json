@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "creation": "2026-11-03 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "privacy_mode",
+  "ai_enabled",
+  "section_uploads",
+  "max_file_size_mb",
+  "allowed_extensions",
+  "section_processing",
+  "max_pages",
+  "max_attempts",
+  "retry_base_seconds",
+  "retry_max_seconds",
+  "section_retention",
+  "retention_days_originals"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enable Zero Touch Processing"
+  },
+  {
+   "default": "local_only",
+   "fieldname": "privacy_mode",
+   "fieldtype": "Select",
+   "label": "Privacy Mode",
+   "options": "local_only\nminimal_external\nexternal_allowed"
+  },
+  {
+   "default": "0",
+   "description": "AI is off until an administrator enables it and configures an LLM provider. Not used in this release.",
+   "fieldname": "ai_enabled",
+   "fieldtype": "Check",
+   "label": "Enable AI Extraction"
+  },
+  {
+   "fieldname": "section_uploads",
+   "fieldtype": "Section Break",
+   "label": "Uploads"
+  },
+  {
+   "default": "20",
+   "fieldname": "max_file_size_mb",
+   "fieldtype": "Int",
+   "label": "Maximum File Size (MB)"
+  },
+  {
+   "default": "pdf,jpg,jpeg,png,tif,tiff,csv,xlsx,docx",
+   "fieldname": "allowed_extensions",
+   "fieldtype": "Small Text",
+   "label": "Allowed Extensions"
+  },
+  {
+   "fieldname": "section_processing",
+   "fieldtype": "Section Break",
+   "label": "Processing"
+  },
+  {
+   "default": "50",
+   "description": "Maximum number of pages read from one PDF or multi-page image.",
+   "fieldname": "max_pages",
+   "fieldtype": "Int",
+   "label": "Maximum Pages per Document"
+  },
+  {
+   "default": "5",
+   "fieldname": "max_attempts",
+   "fieldtype": "Int",
+   "label": "Maximum Automatic Attempts"
+  },
+  {
+   "description": "Account used to post the tax amount read from the document. The tax is added as an Actual amount, so any VAT rate on the document is matched exactly.",
+   "fieldname": "tax_account",
+   "fieldtype": "Link",
+   "label": "Tax Account (VAT)",
+   "options": "Account"
+  },
+  {
+   "default": "60",
+   "fieldname": "retry_base_seconds",
+   "fieldtype": "Int",
+   "label": "Retry Base Delay (seconds)"
+  },
+  {
+   "default": "3600",
+   "fieldname": "retry_max_seconds",
+   "fieldtype": "Int",
+   "label": "Retry Maximum Delay (seconds)"
+  },
+  {
+   "fieldname": "section_retention",
+   "fieldtype": "Section Break",
+   "label": "Retention"
+  },
+  {
+   "default": "0",
+   "description": "0 keeps originals until a retention policy is set.",
+   "fieldname": "retention_days_originals",
+   "fieldtype": "Int",
+   "label": "Keep Original Files (days, 0 = keep)"
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-11-03 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Zero Touch",
+ "name": "Zero Touch Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Zero Touch Manager"
+  },
+  {
+   "read": 1,
+   "role": "Zero Touch Admin",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

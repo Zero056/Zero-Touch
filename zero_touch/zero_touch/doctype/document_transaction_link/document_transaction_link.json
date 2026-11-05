@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "creation": "2026-11-04 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "links": [],
+ "modified": "2026-11-04 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Zero Touch",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "name": "Document Transaction Link",
+ "autoname": "hash",
+ "track_changes": 1,
+ "field_order": [
+  "intake",
+  "extraction",
+  "target_doctype",
+  "target_name",
+  "creation_key",
+  "created_by",
+  "created_at"
+ ],
+ "fields": [
+  {
+   "fieldname": "intake",
+   "fieldtype": "Link",
+   "label": "Intake",
+   "options": "Document Intake",
+   "read_only": 1,
+   "search_index": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "extraction",
+   "fieldtype": "Link",
+   "label": "Extraction",
+   "options": "Document Extraction",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_doctype",
+   "fieldtype": "Link",
+   "label": "Created DocType",
+   "options": "DocType",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "target_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Created Document",
+   "options": "target_doctype",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "creation_key",
+   "fieldtype": "Data",
+   "label": "Creation Key",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "created_at",
+   "fieldtype": "Datetime",
+   "label": "Created At",
+   "read_only": 1
+  }
+ ],
+ "permissions": [
+  {
+   "read": 1,
+   "role": "Zero Touch Manager"
+  },
+  {
+   "read": 1,
+   "role": "Zero Touch Reviewer"
+  },
+  {
+   "read": 1,
+   "create": 1,
+   "write": 1,
+   "delete": 1,
+   "role": "System Manager"
+  }
+ ]
+}

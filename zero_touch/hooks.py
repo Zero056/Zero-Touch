@@ -253,3 +253,27 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+
+# Zero Touch
+# ----------
+before_install = "zero_touch.install.before_install"
+after_install = "zero_touch.install.after_install"
+
+doctype_js = {"Document Intake": "public/js/document_intake.js"}
+doctype_list_js = {"Document Intake": "public/js/document_intake_list.js"}
+
+permission_query_conditions = {
+	"Document Intake": "zero_touch.security.access.intake_query_conditions",
+	"Document Processing Log": "zero_touch.security.access.log_query_conditions",
+}
+
+has_permission = {
+	"Document Intake": "zero_touch.security.access.intake_has_permission",
+	"Document Processing Log": "zero_touch.security.access.log_has_permission",
+}
+
+scheduler_events = {
+	"cron": {
+		"*/5 * * * *": ["zero_touch.pipeline.jobs.scheduled_maintenance"],
+	},
+}
